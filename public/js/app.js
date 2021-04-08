@@ -16,7 +16,7 @@ weatherData.addEventListener('submit', (event) => {
     messageTwo.textContent = ''
 
     if(location.length){
-        const url = ('http://localhost:3000/weather?address=' + location.toLowerCase())
+        const url = ('/weather?address=' + location.toLowerCase())
 
         fetch(url).then((response) => {
             response.json().then((data) => {
