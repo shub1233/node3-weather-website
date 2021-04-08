@@ -10,7 +10,7 @@ const forecast = ( lat, long, callback) => {
         } else if(+body.cod === 400) {
             callback("Unable to find location", undefined)
         } else {
-            callback(undefined, "Its currently " + body.main.temp + " degrees out. There is 0% chance of rain")
+            callback(undefined, "Its currently " + body.main.temp + " degrees out. The high today is "+ body.main.temp_max + " with a low of " + body.main.temp_min +".")
         }
     })
 }
